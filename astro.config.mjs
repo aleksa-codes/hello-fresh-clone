@@ -7,6 +7,6 @@ import image from '@astrojs/image';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://aleksa-codes.github.io',
-  base: '/hello-fresh-site-clone/',
+  base: '/hello-fresh-clone/',
   integrations: [tailwind(), sitemap(), image()]
 });

@@ -25,10 +25,10 @@
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.29.6.tgz#8a08691c1ec4b61c523884c8420f4cfa9b9f229a"
   integrity sha512-Jpwb+GhfV5u3yVZCaCggBX4OjL4jo0PJs5q/TdbgZP7Qpn5rbxpeu/TPxd61emY0gGcnhQR6Sso35C3jzjTS8Q==
 
-"@astrojs/image@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/image/-/image-0.11.0.tgz#dd518a107bcac335550700a29f195e267456b9d1"
-  integrity sha512-cWmqig0t4ndb+4v4YwuKJObpU9zWOVsNdEmvoEPPJUgtrrJzaxJYSRBe+pbvjP0xe+cQIk6fOKAq5lchK8VBzQ==
+"@astrojs/image@^0.11.1":
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/image/-/image-0.11.1.tgz#98c8a394d72e50de3915de1475c8e8fedc46de9e"
+  integrity sha512-LgmATS/LfDlHyUzhgPfIIJNC7XGZ9sr01ur1Q+IMDgkCCoplUbN1zBt2DY4M0XZ13QaVF1Ok/tCaMjIbh1pSVA==
   dependencies:
     "@altano/tiny-async-pool" "^1.0.2"
     http-cache-semantics "^4.1.0"
@@ -37,6 +37,7 @@
     magic-string "^0.25.9"
     mime "^3.0.0"
     slash "^4.0.0"
+    web-streams-polyfill "^3.2.1"
 
 "@astrojs/language-server@^0.26.2":
   version "0.26.2"
@@ -116,10 +117,10 @@
     sitemap "^7.1.1"
     zod "^3.17.3"
 
-"@astrojs/tailwind@^2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@astrojs/tailwind/-/tailwind-2.1.1.tgz#3887486b62ac3fbe1ef5f5898fcaf4d8942d2f48"
-  integrity sha512-Il6FODtu4AlwadleJS3VWmAOOmeCDKvAo3iof46p4iHtdeWLClyuH9kJXWrlzCS+QOfBSIfXxvwPJ3cbK5COlA==
+"@astrojs/tailwind@^2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@astrojs/tailwind/-/tailwind-2.1.2.tgz#0004fb05bb574b0110cb5c4874bd611764cfc5a7"
+  integrity sha512-nIrlT+WWp/Wv2VQ29Nvncq608E+j3qB9k1f7yiAjY2ijxizZo4OnQzdRPQcIjIZHL5YxPtzbcoSP2u3v+Domqw==
   dependencies:
     "@proload/core" "^0.3.2"
     autoprefixer "^10.4.7"
@@ -493,10 +494,10 @@
   dependencies:
     tsm "^2.1.4"
 
-"@tailwindcss/typography@^0.5.7":
-  version "0.5.7"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.5.7.tgz#e0b95bea787ee14c5a34a74fc824e6fe86ea8855"
-  integrity sha512-JTTSTrgZfp6Ki4svhPA4mkd9nmQ/j9EfE7SbHJ1cLtthKkpW2OxsFXzSmxbhYbEkfNIyAyhle5p4SYyKRbz/jg==
+"@tailwindcss/typography@^0.5.8":
+  version "0.5.8"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.5.8.tgz#8fb31db5ab0590be6dfa062b1535ac86ad9d12bf"
+  integrity sha512-xGQEp8KXN8Sd8m6R4xYmwxghmswrd0cPnNI2Lc6fmrC3OojysTBJJGSIVwPV56q4t6THFUK3HJ0EaWwpglSxWw==
   dependencies:
     lodash.castarray "^4.4.0"
     lodash.isplainobject "^4.0.6"
@@ -756,10 +757,10 @@ ast-types@0.14.2:
   dependencies:
     tslib "^2.0.1"
 
-astro@^1.6.2:
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-1.6.2.tgz#85b03201ba6a1cd1476ac4f7849dc450692e4e76"
-  integrity sha512-UHbzQ3Q7iU2a0XBY6Dzh/Hksoa7svmkWZ3ABRGgSOT765GXIGZkErgeNAsjsBW7RsTUKVLqVxD2LK3NzZL5EKA==
+astro@^1.6.3:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-1.6.3.tgz#779e037b9de3b8e33b5eb4ead9fd3ae299b7ab62"
+  integrity sha512-Om84PLuuF497q1LVMzcr0jI3r0kNoYgdX7W0IVUgVnrNd7ubK11h9zhg/2MHRSui+0vCH3+0hnCnCG6QEd2a2Q==
   dependencies:
     "@astrojs/compiler" "^0.29.5"
     "@astrojs/language-server" "^0.26.2"
@@ -1092,10 +1093,10 @@ cssesc@^3.0.0:
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
 
-daisyui@^2.37.0:
-  version "2.37.0"
-  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-2.37.0.tgz#9bca69fa3c9608bdfb0dfe1990444a9e847a372e"
-  integrity sha512-dwnPE4OC3UDGoarb7DM+XoiQWyccmTj7wMHR0ugZX1/4fIevhbHl7jr8b3jh1b9bOBff4ZXgbi6Mj6B6HgOymg==
+daisyui@^2.38.1:
+  version "2.38.1"
+  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-2.38.1.tgz#28a3303a1832f41e9804d76ec769335ac1248372"
+  integrity sha512-fHAVi+bT3H9QCNM7LNEH1EMPT0IwqufuW2RNhTJZorX3TftB1bWW437BVmSt70AZH72Xvp0mVxwVS3ChSKSj0w==
   dependencies:
     color "^4.2"
     css-selector-tokenizer "^0.8.0"
@@ -2990,7 +2991,7 @@ postcss@^8.4.14:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-postcss@^8.4.17, postcss@^8.4.18:
+postcss@^8.4.18:
   version "8.4.18"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.18.tgz#6d50046ea7d3d66a85e0e782074e7203bc7fbca2"
   integrity sha512-Wi8mWhncLJm11GATDaQKobXSNEYGUHeQLiQqDFG1qQ5UTDPTEvKw0Xt5NsTpktGTwLps3ByrWsBrG0rB8YQ9oA==
@@ -3568,10 +3569,10 @@ tailwindcss@^3:
     quick-lru "^5.1.1"
     resolve "^1.22.1"
 
-tailwindcss@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.2.1.tgz#1bd828fff3172489962357f8d531c184080a6786"
-  integrity sha512-Uw+GVSxp5CM48krnjHObqoOwlCt5Qo6nw1jlCRwfGy68dSYb/LwS9ZFidYGRiM+w6rMawkZiu1mEMAsHYAfoLg==
+tailwindcss@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.2.2.tgz#705f78cec8f4de2feb52abdb7a8a056e67f2d736"
+  integrity sha512-c2GtSdqg+harR4QeoTmex0Ngfg8IIHNeLQH5yr2B9uZbZR1Xt1rYbjWOWTcj3YLTZhrmZnPowoQDbSRFyZHQ5Q==
   dependencies:
     arg "^5.0.2"
     chokidar "^3.5.3"
@@ -3587,7 +3588,7 @@ tailwindcss@^3.2.1:
     normalize-path "^3.0.0"
     object-hash "^3.0.0"
     picocolors "^1.0.0"
-    postcss "^8.4.17"
+    postcss "^8.4.18"
     postcss-import "^14.1.0"
     postcss-js "^4.0.0"
     postcss-load-config "^3.1.4"
@@ -3926,7 +3927,7 @@ web-namespaces@^2.0.0:
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-2.0.1.tgz#1010ff7c650eccb2592cebeeaf9a1b253fd40692"
   integrity sha512-bKr1DkiNa2krS7qxNtdrtHAmzuYGFQLiQ13TsorsdT6ULTkPLKuu5+GsFpDlg6JFjUTwX2DyhMPG2be8uPrqsQ==
 
-web-streams-polyfill@^3.0.3:
+web-streams-polyfill@^3.0.3, web-streams-polyfill@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.2.1.tgz#71c2718c52b45fd49dbeee88634b3a60ceab42a6"
   integrity sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==

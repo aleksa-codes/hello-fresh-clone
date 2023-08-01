@@ -1,110 +1,73 @@
 <section class='not-prose'>
-  <hr />
-  <div class='container lg:px-24 xl:px-48 mx-auto px-4 py-4'>
+  <div class='container lg:px-24 xl:px-48 mx-auto px-4 py-8 relative'>
+    <hr />
     <div class='text-center py-4'>
-      <div class='text-gray-900 text-3xl mb-2 font-semibold'>
-        Over 30+ fresh recipes every week
-      </div>
+      <div class='text-gray-900 text-3xl mb-2 font-semibold'>Over 30+ fresh recipes every week</div>
       <div class='text-base xl:w-2/4 lg:w-3/4 mx-auto text-gray-700'>
         Easy meals designed by professional chefs and nutritionists
       </div>
     </div>
-    <div class='carousel space-x-4 h-80'>
-      <div class='carousel-item w-72 bg-base-100'>
-        <div
-          class='w-full flex flex-col justify-end p-2 rounded-md'
-          style='background-image: url(https://api.lorem.space/image/burger?w=384&h=462);'
-        >
-          <h2 class='text-white uppercase font-semibold text-3xl my-2'>
-            MEAT & VEGGIES
-          </h2>
-          <div
-            class='bg-orange-300 w-fit text-gray-900 px-2 rounded-md text-base font-semibold uppercase'
-          >
-            OUR MOST POPULAR PLAN
-          </div>
-        </div>
-      </div>
-      <div class='carousel-item w-72 bg-base-100'>
-        <div
-          class='w-full flex flex-col justify-end p-2 rounded-md'
-          style='background-image: url(https://api.lorem.space/image/pizza?w=384&h=462);'
-        >
-          <h2 class='text-white uppercase font-semibold text-3xl my-2'>
-            VEGGIE
-          </h2>
-          <div
-            class='bg-green-300 w-fit text-gray-900 px-2 rounded-md text-base font-semibold uppercase'
-          >
-            PLANT-BASED MEALS
-          </div>
-        </div>
-      </div>
-      <div class='carousel-item w-72 bg-base-100'>
-        <div
-          class='w-full flex flex-col justify-end p-2 rounded-md'
-          style='background-image: url(https://api.lorem.space/image/burger?w=384&h=462);'
-        >
-          <h2 class='text-white uppercase font-semibold text-3xl my-2'>
-            FAMILY FRIENDLY
-          </h2>
-          <div
-            class='bg-blue-300 w-fit text-gray-900 px-2 rounded-md text-base font-semibold uppercase'
-          >
-            KID-TESTED RECIPES
-          </div>
-        </div>
-      </div>
-      <div class='carousel-item w-72 bg-base-100'>
-        <div
-          class='w-full flex flex-col justify-end p-2 rounded-md'
-          style='background-image: url(https://api.lorem.space/image/pizza?w=384&h=462);'
-        >
-          <h2 class='text-white uppercase font-semibold text-3xl my-2'>
-            FIT & WHOLESOME
-          </h2>
-          <div
-            class='bg-orange-300 w-fit text-gray-900 px-2 rounded-md text-base font-semibold uppercase'
-          >
-            FOR A BALANCED LIFESTYLE
-          </div>
-        </div>
-      </div>
-      <div class='carousel-item w-72 bg-base-100'>
-        <div
-          class='w-full flex flex-col justify-end p-2 rounded-md'
-          style='background-image: url(https://api.lorem.space/image/burger?w=384&h=462);'
-        >
-          <h2 class='text-white uppercase font-semibold text-3xl my-2'>
-            QUICK & EASY
-          </h2>
-          <div
-            class='bg-red-300 w-fit text-gray-900 px-2 rounded-md text-base font-semibold uppercase'
-          >
-            FOR BUSY WEEKNIGHTS
-          </div>
-        </div>
-      </div>
-      <div class='carousel-item w-72 bg-base-100'>
-        <div
-          class='w-full flex flex-col justify-end p-2 rounded-md'
-          style='background-image: url(https://api.lorem.space/image/pizza?w=384&h=462);'
-        >
-          <h2 class='text-white uppercase font-semibold text-3xl my-2'>
-            PESCATARIAN
-          </h2>
-          <div
-            class='bg-gray-500 w-fit text-gray-900 px-2 rounded-md text-base font-semibold uppercase'
-          >
-            SEAFOOD & VEGGIE MEALS
-          </div>
-        </div>
-      </div>
+    <div id='carousel' class='carousel space-x-4 pt-4 overflow-x-auto'>
+      <!-- Carousel items will be inserted here by JavaScript -->
     </div>
-    <button
-      class='btn btn-outline btn-primary mx-auto flex normal-case px-8 text-base my-12'
-      >View our menus</button
-    >
+    <div id='prev' class='btn btn-circle absolute top-1/2 left-24 transform -translate-y-1/2'>❮</div>
+    <div id='next' class='btn btn-circle absolute top-1/2 right-24 transform -translate-y-1/2'>❯</div>
+    <button class='btn btn-outline btn-primary mx-auto flex normal-case px-8 text-base my-12'>View our menus</button>
   </div>
   <hr />
 </section>
+
+<script>
+  interface CarouselItem {
+    tags: string;
+    title: string;
+    subtitle: string;
+    bgColor: string; // background color for the subtitle
+  }
+  var carouselItems: CarouselItem[] = [
+    { tags: 'meat,veggies', title: 'MEAT & VEGGIES', subtitle: 'OUR MOST POPULAR PLAN', bgColor: 'bg-orange-300' },
+    { tags: 'veggie', title: 'VEGGIE', subtitle: 'PLANT-BASED MEALS', bgColor: 'bg-green-300' },
+    { tags: 'family', title: 'FAMILY FRIENDLY', subtitle: 'KID-TESTED RECIPES', bgColor: 'bg-blue-300' },
+    { tags: 'healthy', title: 'FIT & WHOLESOME', subtitle: 'FOR A BALANCED LIFESTYLE', bgColor: 'bg-orange-300' },
+    { tags: 'quick,easy', title: 'QUICK & EASY', subtitle: 'FOR BUSY WEEKNIGHTS', bgColor: 'bg-red-300' },
+    { tags: 'seafood,veggie', title: 'PESCATARIAN', subtitle: 'SEAFOOD & VEGGIE MEALS', bgColor: 'bg-gray-500' }
+    // Add more items here as needed
+  ];
+
+  var carousel = document.getElementById('carousel');
+  function createCarouselItem(item: CarouselItem) {
+    var carouselItem = document.createElement('div');
+    carouselItem.className = 'carousel-item relative h-96 rounded-md';
+
+    var img = document.createElement('img');
+    img.src = 'https://source.unsplash.com/384x462?' + item.tags;
+    img.className = 'rounded-md';
+
+    var label = document.createElement('div');
+    label.className = 'absolute bottom-2 left-2';
+
+    var h2 = document.createElement('h2');
+    h2.className = 'text-white uppercase font-semibold text-3xl my-2';
+    h2.textContent = item.title;
+
+    var p = document.createElement('div');
+    p.className = item.bgColor + ' w-fit text-gray-900 px-2 rounded-md text-base font-semibold uppercase';
+    p.textContent = item.subtitle;
+
+    label.appendChild(h2);
+    label.appendChild(p);
+    carouselItem.appendChild(img);
+    carouselItem.appendChild(label);
+    carousel?.appendChild(carouselItem);
+  }
+
+  carouselItems.forEach(createCarouselItem);
+
+  var scrollAmount = 400;
+  document.getElementById('prev')?.addEventListener('click', function () {
+    carousel?.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+  document.getElementById('next')?.addEventListener('click', function () {
+    carousel?.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+</script>

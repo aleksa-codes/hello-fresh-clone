@@ -1,127 +1,62 @@
 <section class='not-prose'>
   <div class='container lg:px-24 xl:px-48 mx-auto px-4 py-8'>
     <div class='text-center py-4'>
-      <div class='text-gray-900 text-3xl mb-2 font-semibold'>
-        Cook it. Love it. Tag it #HelloFreshPics
-      </div>
-      <div class='text-base mx-auto text-gray-700'>
-        Follow us on Instagram @hellofresh
-      </div>
+      <div class='text-gray-900 text-3xl mb-2 font-semibold'>Cook it. Love it. Tag it #HelloFreshPics</div>
+      <div class='text-base mx-auto text-gray-700'>Follow us on Instagram @hellofresh</div>
     </div>
     <!-- 4 images in a row representing instagram posts with username and caption centered below -->
-    <div class='hidden xl:flex xl:flex-row justify-between w-full gap-8'>
-      <div class='flex flex-col items-center justify-center'>
-        <img
-          class='w-64 h-64 object-cover rounded-lg'
-          src='https://picsum.photos/seed/1/400/600'
-          alt='hellofresh'
-        />
-        <div class='text-gray-900 text-base font-semibold mt-4'>
-          @hellofresh
-        </div>
-        <div class='text-gray-700 text-sm text-center mt-2 px-4'>
-          This is a caption for the image above. It should be short and sweet.
-        </div>
-      </div>
-      <div class='flex flex-col items-center justify-center'>
-        <img
-          class='w-64 h-64 object-cover rounded-lg'
-          src='https://picsum.photos/seed/2/400/600'
-          alt='hellofresh'
-        />
-        <div class='text-gray-900 text-base font-semibold mt-4'>
-          @hellofresh
-        </div>
-        <div class='text-gray-700 text-sm text-center mt-2 px-4'>
-          This is a caption for the image above. It should be short and sweet.
-        </div>
-      </div>
-      <div class='flex flex-col items-center justify-center'>
-        <img
-          class='w-64 h-64 object-cover rounded-lg'
-          src='https://picsum.photos/seed/3/400/600'
-          alt='hellofresh'
-        />
-        <div class='text-gray-900 text-base font-semibold mt-4'>
-          @hellofresh
-        </div>
-        <div class='text-gray-700 text-sm text-center mt-2 px-4'>
-          This is a caption for the image above. It should be short and sweet.
-        </div>
-      </div>
-      <div class='flex flex-col items-center justify-center'>
-        <img
-          class='w-64 h-64 object-cover rounded-lg'
-          src='https://picsum.photos/seed/4/400/600'
-          alt='hellofresh'
-        />
-        <div class='text-gray-900 text-base font-semibold mt-4'>
-          @hellofresh
-        </div>
-        <div class='text-gray-700 text-sm text-center mt-2 px-4'>
-          This is a caption for the image above. It should be short and sweet.
-        </div>
-      </div>
-    </div>
-    <div class='carousel xl:hidden w-full'>
-      <div
-        class='flex flex-col items-center justify-center carousel-item w-64 mr-12'
-      >
-        <img
-          class='w-64 h-64 object-cover rounded-lg'
-          src='https://picsum.photos/seed/1/400/600'
-          alt='hellofresh'
-        />
-        <div class='text-gray-900 text-base font-semibold mt-4'>
-          @hellofresh
-        </div>
-        <div class='text-gray-700 text-sm text-center mt-2 w-3/4'>
-          This is a caption for the image above. It should be short and sweet.
-        </div>
-      </div>
-      <div
-        class='flex flex-col items-center justify-center carousel-item w-64 mr-12'
-      >
-        <img
-          class='w-64 h-64 object-cover rounded-lg'
-          src='https://picsum.photos/seed/2/400/600'
-          alt='hellofresh'
-        />
-        <div class='text-gray-900 text-base font-semibold mt-4'>
-          @hellofresh
-        </div>
-        <div class='text-gray-700 text-sm text-center mt-2 w-3/4'>
-          This is a caption for the image above. It should be short and sweet.
-        </div>
-      </div>
-      <div
-        class='flex flex-col items-center justify-center carousel-item w-64 mr-12'
-      >
-        <img
-          class='w-64 h-64 object-cover rounded-lg'
-          src='https://picsum.photos/seed/3/400/600'
-          alt='hellofresh'
-        />
-        <div class='text-gray-900 text-base font-semibold mt-4'>
-          @hellofresh
-        </div>
-        <div class='text-gray-700 text-sm text-center mt-2 w-3/4'>
-          This is a caption for the image above. It should be short and sweet.
-        </div>
-      </div>
-      <div class='flex flex-col items-center justify-center carousel-item w-64'>
-        <img
-          class='w-64 h-64 object-cover rounded-lg'
-          src='https://picsum.photos/seed/4/400/600'
-          alt='hellofresh'
-        />
-        <div class='text-gray-900 text-base font-semibold mt-4'>
-          @hellofresh
-        </div>
-        <div class='text-gray-700 text-sm text-center mt-2 w-3/4'>
-          This is a caption for the image above. It should be short and sweet.
-        </div>
-      </div>
-    </div>
+    <div class='hidden xl:flex xl:flex-row justify-between w-full gap-8' id='imageGrid'></div>
+    <div class='carousel xl:hidden w-full' id='carouselGrid'></div>
   </div>
 </section>
+
+<script>
+  var images = [
+    'https://source.unsplash.com/random/400x600?food',
+    'https://source.unsplash.com/random/400x600?cooking',
+    'https://source.unsplash.com/random/400x600?meal',
+    'https://source.unsplash.com/random/400x600?dinner'
+  ];
+
+  var captions = ['This is a delicious meal', 'Cooked with love', 'Healthy and tasty', 'Dinner is served'];
+
+  function getRandomCaption() {
+    return captions[Math.floor(Math.random() * captions.length)];
+  }
+
+  function createImageDiv(item: string, className: string) {
+    var div = document.createElement('div');
+    div.className = className;
+
+    var img = document.createElement('img');
+    img.src = item;
+    img.className = 'w-64 h-64 object-cover rounded-lg';
+    img.alt = 'hellofresh';
+
+    var user = document.createElement('div');
+    user.className = 'text-gray-900 text-base font-semibold mt-4';
+    user.textContent = '@hellofresh';
+
+    var caption = document.createElement('div');
+    caption.className = 'text-gray-700 text-sm text-center mt-2 px-4';
+    caption.textContent = getRandomCaption();
+
+    div.appendChild(img);
+    div.appendChild(user);
+    div.appendChild(caption);
+
+    return div;
+  }
+
+  // Insert images into the HTML
+  var grid = document.getElementById('imageGrid');
+  var carousel = document.getElementById('carouselGrid');
+
+  images.forEach(function (item) {
+    var gridDiv = createImageDiv(item, 'flex flex-col items-center justify-center');
+    grid?.appendChild(gridDiv);
+
+    var carouselDiv = createImageDiv(item, 'flex flex-col items-center justify-center carousel-item w-64 mr-12');
+    carousel?.appendChild(carouselDiv);
+  });
+</script>
